@@ -1,0 +1,75 @@
+#home {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  #facility {
+    min-width: 100vw;
+    display: flex;
+    color: @light;
+    text-align: center;
+    justify-content: center;
+    min-height: fit-content;
+
+    div {
+      max-width: 75%;
+      height: fit-content;
+      margin: 5%;
+      padding: 1%;
+      justify-content: center;
+      background-color: #083d7799;
+      border-radius: 10px;
+      ;
+
+      h1 {
+        padding: 2%;
+        color: @light;
+        -webkit-text-stroke: 0.5px @red;
+      }
+
+      h3 {
+        padding: 1.5%;
+        padding-bottom: 2%;
+        font-weight: bolder;
+      }
+    }
+  }
+
+  #banner {
+    min-width: 100vw;
+    display: flex;
+    padding: 1.5%;
+    justify-content: space-around;
+
+    h1 {
+      background-color: @blue;
+      width: 75%;
+      min-width: fit-content;
+      padding: 1%;
+      text-align: center;
+      color: @light;
+      border: 5px solid @red;
+      border-radius: 15px;
+      box-shadow: 2.5px 5px 4px #00000075;
+    }
+  }
+
+  #unit-overview {
+    min-width: fit-content;
+    display: flex;
+    padding: 2%;
+
+    .unit-price {
+      box-shadow: 2.5px 5px 4px #00000075;
+      margin: 2%;
+      padding: 2%;
+      text-align: center;
+      width: fit-content;
+      width: 300px;
+      background-color: @red;
+      color: @light;
+      border-radius: 25px;
+      border: 5px solid @blue;
+    }
+  }
+}
