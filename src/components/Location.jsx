@@ -5,7 +5,11 @@ const Location = () => {
   return (
     <div id='location'>
       <div id='map'>
-        <h1>We are located across the street from Memorial Stadium!</h1>
+        <h1>{`We are located at `}
+          <span style={{ textDecoration: "underline" }}>
+            5432 Southwest Parkway
+          </span>
+          {` across the street from Memorial Stadium!`}</h1>
         <Map />
       </div>
       <div id='directions'>
