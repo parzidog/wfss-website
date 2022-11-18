@@ -1,0 +1,90 @@
+#contact {
+  #description {
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+    padding: 2%;
+    text-align: center;
+  }
+
+  #contact-form {
+    form {
+      display: flex;
+      flex-direction: column;
+      width: 25%;
+      margin: auto;
+
+      input {
+        margin: 0.5rem 0;
+        padding: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+
+      textarea {
+        margin: 0.5rem 0;
+        padding: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+
+      button {
+        margin: 0.5rem 0;
+        padding: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #083d77;
+        color: white;
+        font-weight: 600;
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
+
+/* The alert message box */
+.alert {
+  display: none;
+  padding: 20px;
+  background-color: #00800099;
+  color: white;
+  margin-bottom: 15px;
+  position: fixed;
+  top: 25%;
+  left: 25%;
+  width: 50%;
+  height: fit-content;
+  border: 5px solid @dark;
+  border-radius: 10px;
+
+  h2 {
+    margin: auto;
+    text-align: center;
+    width: 75%;
+    height: fit-content;
+    padding: 2%;
+  }
+
+  img {
+    width: 25%;
+    height: 25%;
+    margin: auto;
+  }
+}
+
+/* The close button */
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* When moving the mouse over the close button */
+.closebtn:hover {
+  color: black;
+}

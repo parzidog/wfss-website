@@ -36,5 +36,17 @@
     a:nth-child(odd) {
       background-color: @blue;
     }
+
+    a:hover {
+      background-color: @redless;
+      -webkit-text-stroke: 0.5px @dark;
+      box-shadow: inset 1.25px 2.5px 2px #00000075;
+    }
+
+    a:nth-child(odd):hover {
+      background-color: @blueless;
+      -webkit-text-stroke: 0.5px @dark;
+    }
   }
+
 }
