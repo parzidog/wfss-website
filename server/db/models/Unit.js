@@ -24,7 +24,7 @@ const Unit = db.define("unit", {
       },
     },
     price: {
-      type: Sequelize.FLOAT(2),
+      type: Sequelize.INTEGER,
       allowNull: false,
       validate: {
         notEmpty: true,

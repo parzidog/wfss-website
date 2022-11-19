@@ -4,7 +4,7 @@ import Contact from "./components/Contact";
 import Home from "./components/Home";
 import Location from "./components/Location";
 import Pricing from "./components/Pricing";
-import NotFound from "./components/NotFound";
+// import NotFound from "./components/NotFound";
 import FAQ from "./components/FAQ";
 import SizeGuide from "./components/SizeGuide";
 
@@ -19,7 +19,7 @@ function App() {
           <Route path="size" element={<SizeGuide />} />
           <Route path="faq" element={<FAQ />} />
           <Route path="contact" element={<Contact />} />
-          <Route path="*" element={<NotFound />} />
+          {/* <Route path="*" element={<NotFound />} /> */}
         </Route>
       </Routes>
     </div>

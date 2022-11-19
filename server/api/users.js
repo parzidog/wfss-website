@@ -114,12 +114,9 @@ router.get("/all", requireToken, async (req, res, next) => {
           "id",
           "firstName",
           "lastName",
-          "gender",
-          "phoneNum",
           "username",
           "password",
           "email",
-          "isAdmin",
         ],
       });
       res.send({ rows, count });
@@ -129,12 +126,9 @@ router.get("/all", requireToken, async (req, res, next) => {
           "id",
           "firstName",
           "lastName",
-          "gender",
-          "phoneNum",
           "username",
           "password",
           "email",
-          "isAdmin",
         ],
       });
       res.send({ rows, count });

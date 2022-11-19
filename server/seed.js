@@ -1,2 +1,2 @@
-const { seedFunc } = require("./db")
-seedFunc()
+const { seed } = require("./db/index")
+seed()

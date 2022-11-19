@@ -1,14 +1,15 @@
+import axios from "axios";
 import React, { useEffect, useState } from "react"
 // import { fetchAllUnits } from "../features/unitSlice"
-import { useSelector } from "react-redux"
+// import { useSelector } from "react-redux"
 
 const Pricing = () => {
-  const [units, setUnits] = useState(useSelector((state) => state.unit.allUnits));
+  const [units, setUnits] = useState([]);
 
   console.log("units", units);
 
   useEffect(() => {
-    setUnits([...units]);
+    setUnits(async () => await axios.get("http://localhost:3000/api/units"));
   }, []);
 
   return (
