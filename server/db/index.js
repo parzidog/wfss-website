@@ -6,6 +6,13 @@ const User = require("./models/User");
 const Unit = require("./models/Unit");
 
 const users = [];
+const units = [
+  {
+    length: 10,
+    width: 10,
+    price: 84.99,
+  }
+];
 
 const syncAndSeed = async () => {
   try {
@@ -13,7 +20,7 @@ const syncAndSeed = async () => {
 
     await Promise.all(users.map((user) => User.create(user)));
 
-    await Promise.all(users.map((unit) => Unit.create(unit)));
+    await Promise.all(units.map((unit) => Unit.create(unit)));
 
     //   await db.close();
 

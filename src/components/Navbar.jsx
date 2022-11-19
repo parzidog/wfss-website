@@ -1,29 +1,29 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import logo from '../assets/logo.png'
+import React from "react"
+import { Link } from "react-router-dom"
+import logo from "../assets/logo.png"
 
 const Navbar = () => {
   return (
     <nav id='navbar'>
-      <Link to={'/'}>
+      <Link to={"/"}>
         <img src={logo} alt="logo" />
       </Link>
       <div id='nav-buttons'>
-        <Link to={'pricing'}>
+        <Link to={"pricing"}>
           <h2>Unit Pricing</h2>
         </Link>
-        <Link to={'location'}>
+        <Link to={"location"}>
           <h2>Location</h2>
         </Link>
-        <Link to={'size'}>
+        <Link to={"size"}>
           <h2>Size Guide</h2>
         </Link>
-        <Link to={'faq'}>
+        <Link to={"faq"}>
           <h2>
             FAQ
           </h2>
         </Link>
-        <Link to={'contact'}>
+        <Link to={"contact"}>
           <h2>
             Contact Us
           </h2>
