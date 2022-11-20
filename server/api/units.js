@@ -1,58 +1,58 @@
 const router = require("express").Router();
-const { Unit } = require("../db")
-
+const { Unit } = require("../db/models");
 
 // GET /api/units
 router.get("/", async (req, res, next) => {
   try {
-    const units = await Unit.findAll()
-    console.log("db units", units)
-    res.send(units)
+    const units = await Unit.findAll();
+    res.json(units);
   } catch (error) {
-    next(error)
+    next(error);
   }
-})
+});
 
-// GET /api/units/:id
-router.get("/:id", async (req, res, next) => {
+// POST /api/units
+router.post("/", async (req, res) => {
   try {
-    const unit = await Unit.findByPk(req.params.id)
-    res.send(unit)
-  } catch (error) {
-    next(error)
+    res.send(await Unit.create(req.body))
+  }
+  catch (error) {
+    console.log(error)
   }
 })
 
-//POST /api/units
-router.post("/", async (req, res, next) => {
+// GET /api/units/:unitId
+router.get("/:unitId", async (req, res, next) => {
   try {
-    const unit = await Unit.create(req.body)
-    res.status(201).send(unit)
-  } catch (error) {
-    next(error)
-  }
-})
+    const unit = await Unit.findByPk(req.params.unitId);
 
-//DELETE /api/units/:id
-router.delete("/:id", async (req, res, next) => {
+    res.json(unit);
+  } catch (error) {
+    next(error);
+  }
+});
+
+// DELETE /api/units/:unitId
+router.delete("/:unitId", async (req, res) => {
   try {
-    const unit = await Unit.findByPk(req.params.id)
-    await unit.destroy()
-    res.send(unit)
-  } catch (error) {
-    next(error)
+    const unit = await Unit.findByPk(req.params.unitId);
+    await unit.destroy();
+    res.send(unit);
+  }
+  catch (error) {
+    console.log(error)
   }
 })
 
-//PUT /api/units/:id
+// PUT /api/units/:id
 router.put("/:id", async (req, res, next) => {
   try {
     const unit = await Unit.findByPk(req.params.id);
-    unit.update(req.body)
-    res.send(unit)
+    res.send(await unit.update(req.body));
   } catch (error) {
-    next(error)
+    next(error);
   }
-})
+});
 
-module.exports = router
+
+module.exports = router;
