@@ -1,13 +1,18 @@
 const port = process.env.PORT || 3000;
 const app = require("./app");
-const db = require("./db")
+const { db } = require("./db");
 
 const init = async () => {
-  await db.syncAndSeed();
-  app.listen(port, () => console.log(`listening on port ${port}`));
+	try {
+		// await db.sync({ force: true });
+
+		await db.sync();
+		app.listen(port, () => console.log(`listening on port ${port}`));
+	} catch (err) {
+		console.log(err);
+	}
 };
 
 init();
-
 
 //dont touch me!

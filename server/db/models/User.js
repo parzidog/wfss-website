@@ -1,5 +1,5 @@
 const Sequelize = require("sequelize");
-const { db } = require("../db");
+const db = require("../db");
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcrypt");
 require("dotenv").config();
@@ -27,6 +27,9 @@ const User = db.define("user", {
     allowNull: false,
     validate: {
       notEmpty: true,
+    },
+    set(value) {
+      this.setDataValue("username", value.toLowerCase());
     },
   },
   password: {
