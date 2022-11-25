@@ -7,6 +7,7 @@ import Pricing from "./components/Pricing";
 // import NotFound from "./components/NotFound";
 import FAQ from "./components/FAQ";
 import SizeGuide from "./components/SizeGuide";
+import Admin from "./components/Admin";
 
 function App() {
   return (
@@ -19,9 +20,12 @@ function App() {
           <Route path="size" element={<SizeGuide />} />
           <Route path="faq" element={<FAQ />} />
           <Route path="contact" element={<Contact />} />
+          <Route path="admin" element={<Admin />} />
           {/* <Route path="*" element={<NotFound />} /> */}
         </Route>
       </Routes>
+      <div>
+      </div>
     </div>
   );
 }

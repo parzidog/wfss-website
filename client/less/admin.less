@@ -1,0 +1,81 @@
+#admin {
+  width: 100%;
+  min-height: 75vh;
+
+  .login {
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 2%;
+
+    h1 {
+      margin: auto;
+      text-align: center;
+      width: 100%;
+      height: fit-content;
+      padding: 1%;
+      font-size: 4rem;
+      color: @blueless;
+      -webkit-text-stroke: 1px @red;
+      text-shadow: 2px 2px 4px #000000;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      margin: auto;
+      padding: 3%;
+      align-items: center;
+      margin: auto;
+      background-color: @blueless;
+      border: 5px solid @red;
+      border-radius: 10px;
+      color: @light;
+      min-width: 25%;
+      box-shadow: 2px 2px 5px 3px #00000075;
+
+      .box {
+        margin: 0.5rem 0;
+        padding: 1rem;
+
+        label {
+          margin: 0.5rem 0;
+          padding: 1rem;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          box-shadow: 2px 2px 5px 3px #00000075;
+          background-color: @red;
+          font-weight: bolder;
+        }
+
+        input {
+          margin: 0.5rem 0;
+          padding: 1rem;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          box-shadow: 2px 2px 5px 3px #00000075;
+        }
+
+        .submit {
+          margin: 0.5rem 0;
+          padding: 1rem;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          background-color: @red;
+          color: white;
+          font-weight: 600;
+          font-size: 1.5rem;
+          box-shadow: 2px 2px 5px 3px #00000075;
+          cursor: pointer;
+        }
+
+        .submit:active {
+          background-color: @red;
+          color: white;
+          box-shadow: inset 2px 2px 5px 3px #00000099;
+        }
+      }
+    }
+  }
+}

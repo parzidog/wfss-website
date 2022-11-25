@@ -28,7 +28,9 @@ export const loginUser = createAsyncThunk(
 	"user/loginUser",
 	async ({ login }, { rejectWithValue }) => {
 		try {
-			const { data } = await axios.post("/api/user/login", login);
+			console.log("LOGIN", login)
+			const { data } = await axios.get("/api/users/login", login);
+			console.log("DATA", data)
 			return data;
 		} catch (error) {
 			return rejectWithValue(error.response.data);
@@ -119,10 +121,20 @@ const userSlice = createSlice({
 	},
 });
 
-export const getFormInputAvailable = (state) => state.user.formInputAvailable;
-export const isLoggedStatus = (state) => state.user.isLogged;
-export const getUserToken = (state) => state.user.token;
-export const getError = (state) => state.user.error;
+// export const getFormInputAvailable = (state) => state.user.formInputAvailable;
+export const isLoggedStatus = (state) => {
+	if (state.user) {
+		return state.user.isLogged;
+	}
+	return null;
+};;
+// export const getUserToken = (state) => state.user.token;
+export const getError = (state) => {
+	if (state.user) {
+		return state.user.error;
+	}
+	return null;
+};
 
 export const { logout, setError } = userSlice.actions;
 

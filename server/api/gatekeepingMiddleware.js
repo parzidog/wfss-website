@@ -1,5 +1,4 @@
-const sequelize = require('sequelize');
-const { User } = require('../db');
+const { User } = require("../db/models/User");
 
 //user must be logged in/have a token
 const requireToken = async (req, res, next) => {
@@ -13,16 +12,6 @@ const requireToken = async (req, res, next) => {
 	}
 };
 
-//user must be an admin
-const isAdmin = async (req, res, next) => {
-	if (!req.user.isAdmin) {
-		res.status(403).send('must have correct privileges');
-	} else {
-		next();
-	}
-};
-
 module.exports = {
 	requireToken,
-	isAdmin,
 };

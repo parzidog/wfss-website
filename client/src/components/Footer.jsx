@@ -4,7 +4,6 @@ const Footer = () => {
   return (
     <footer>
       <div id='footer'>
-        <div id='creator'>Created and Designed by Parzidog</div>
         <div id='contact'>
           <div className="box" id='phone'>
             <h2>Phone</h2>
@@ -22,6 +21,10 @@ const Footer = () => {
             <p>5432 Southwest Pkwy</p>
             <p>Wichita Falls, TX 76308</p>
           </div>
+        </div>
+        <div id='creator'>Created and Designed by Parzidog</div>
+        <div id="admin-button">
+          <a href="/admin">Admin</a>
         </div>
       </div>
     </footer>

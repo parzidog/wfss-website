@@ -1,10 +1,11 @@
 const router = require("express").Router();
-const { Unit } = require("../db/models");
+const Unit = require("../db/models/Unit");
 
 // GET /api/units
 router.get("/", async (req, res, next) => {
   try {
     const units = await Unit.findAll();
+    console.log("UNITS: ", units);
     res.json(units);
   } catch (error) {
     next(error);
