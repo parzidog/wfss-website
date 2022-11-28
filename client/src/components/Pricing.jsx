@@ -32,28 +32,35 @@ const Pricing = () => {
   }, [units])
 
   return (
-    <div id="pricing">
-      <div id="climate">
-        <h1>Climate Controlled</h1>
-        {climate.length > 0 ? climate.map(unit => {
-          return (
-            <div key={unit.id} className="pricing-card climate" >
-              <h1>{unit.length} x {unit.width} Climate Controlled</h1>
+    <div>
+      <div className="header">
+        <h1>
+          Pricing
+        </h1>
+      </div>
+      <div id="pricing">
+        <div id="climate">
+          <h1>Climate Controlled</h1>
+          {climate.length > 0 ? climate.map(unit => {
+            return (
+              <div key={unit.id} className="pricing-card climate" >
+                <h1>{unit.length} x {unit.width} Climate Controlled</h1>
+                <h2>${unit.price}</h2>
+              </div>
+            )
+          }) : <h1>Loading...</h1>}
+        </div>
+        <div id="non-climate">
+          <h1>Non-Climate Controlled</h1>
+          {nonClimate.length > 0 ? nonClimate.map(unit =>
+            <div key={unit.id} className="pricing-card nonclimate" >
+              <h1>{unit.length} x {unit.width} Non-Climate Controlled</h1>
               <h2>${unit.price}</h2>
             </div>
-          )
-        }) : <h1>Loading...</h1>}
-      </div>
-      <div id="non-climate">
-        <h1>Non-Climate Controlled</h1>
-        {nonClimate.length > 0 ? nonClimate.map(unit =>
-          <div key={unit.id} className="pricing-card nonclimate" >
-            <h1>{unit.length} x {unit.width} Non-Climate Controlled</h1>
-            <h2>${unit.price}</h2>
-          </div>
-        ) : <h1>Loading...</h1>}
-      </div>
-    </div >
+          ) : <h1>Loading...</h1>}
+        </div>
+      </div >
+    </div>
   )
 }
 

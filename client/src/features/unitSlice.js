@@ -5,6 +5,7 @@ export const fetchUnits = createAsyncThunk(
   "units/fetchUnits",
   async () => {
     const { data } = await axios.get("/api/units");
+    console.log("DATA: ", data)
     return data;
   }
 );

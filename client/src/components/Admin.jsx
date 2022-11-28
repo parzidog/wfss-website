@@ -1,12 +1,8 @@
-import React, { useEffect, useState } from "react";
-import { useSelector, useDispatch } from "react-redux";
+import React, { useState } from "react";
+import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import {
   loginUser,
-  fetchUser,
-  getError,
-  setError,
-  isLoggedStatus,
 } from "../features/userSlice";
 
 const Admin = () => {
@@ -14,13 +10,15 @@ const Admin = () => {
   const navigate = useNavigate();
 
   const [login, setLogin] = useState({});
-  const loginAttempt = useState([]);
-  const loginAttempError = useSelector(getError);
-  const isLogged = useSelector(isLoggedStatus);
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    dispatch(loginUser({ login }));
+    dispatch(loginUser({ login }))
+      .then((res) => {
+        window.localStorage.token = res.payload.token;
+        console.log("res", res.payload.token);
+        navigate("/admin/dashboard");
+      })
   };
   const handleChange = (prop) => (event) => {
     let value = event.target.value;
@@ -32,22 +30,6 @@ const Admin = () => {
       [prop]: value,
     });
   };
-  useEffect(() => {
-    loginAttempt &&
-      dispatch(fetchUser())
-        .then(() => {
-          if (window.localStorage.token) {
-            navigate("/admin/dashboard");
-          }
-        });
-    // navigate("/");
-  });
-
-  // useEffect(() => {a
-  //   if (loginAttempError) {
-  //     dispatch(setError());
-  //   }
-  // }, [loginAttempError, isLogged]);
 
   return (
     <div id="admin">

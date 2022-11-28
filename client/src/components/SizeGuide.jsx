@@ -5,14 +5,14 @@ const SizeGuide = () => {
     <div id='size-guide'>
       <div className="header">
         <h1>
-          AVAILABLE UNIT SIZES
+          UNIT SIZES
         </h1>
       </div>
 
       <h2>
         WF Self Storage has more variety in storage unit sizes than anyone in the area.
         <br />
-        Below are just the 5 common size units available:
+        Below are 6 of the common unit sizes available:
       </h2>
 
       <div className="unit-size">

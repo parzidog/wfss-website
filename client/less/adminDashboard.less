@@ -1,0 +1,117 @@
+#admin-dashboard {
+  .content {
+    width: 100vw;
+
+    .units {
+
+      form {
+        width: 100%;
+
+        .climate {
+          .unit {
+            background-color: @blueless;
+            color: @light;
+            -webkit-text-stroke: 0.5px @red;
+          }
+        }
+
+        .non-climate {
+          .unit {
+            background-color: @redless;
+            color: @light;
+            -webkit-text-stroke: 0.5px @blue;
+          }
+        }
+
+        div {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-around;
+
+          .unit {
+            display: block;
+            width: fit-content;
+            min-width: 270px;
+            min-height: 140px;
+            margin: 1rem;
+            padding: 1rem;
+            border: 1px solid black;
+            border-radius: 5px;
+            box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
+            background-color: white;
+
+            h3 {
+              margin: 0;
+              padding: 0;
+              font-size: 1.5rem;
+              font-weight: bold;
+              text-align: center;
+              margin: 1%;
+              padding: 1%;
+            }
+
+            .unit-price {
+              width: 100%;
+
+              h4 {
+                width: 100%;
+                text-align: center;
+                margin: 1%;
+                padding: 1%;
+                font-weight: bolder;
+              }
+
+              input {
+                width: 70px;
+                margin: auto;
+                margin: 1%;
+                padding: 1%;
+                border-radius: 7.5px;
+                text-align: center;
+              }
+            }
+          }
+
+        }
+
+        #submit {
+          width: 100vw;
+          display: flex;
+          justify-content: center;
+          padding: 1%;
+          margin: 1%;
+
+          input {
+            align-items: center;
+            width: 200px;
+            height: 75px;
+            margin: 0.5rem 0;
+            padding: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: @red;
+            color: white;
+            font-weight: 600;
+            font-size: 1.5rem;
+            box-shadow: 2px 2px 5px 3px #00000075;
+            cursor: pointer;
+            border-radius: 5px;
+
+          }
+        }
+      }
+    }
+  }
+}
+
+.climate {
+  .climate {
+    background-color: @blueless;
+  }
+}
+
+.non-climate {
+  .non-climate {
+    background-color: @red;
+  }
+}

@@ -56,11 +56,13 @@ body {
 #navbar #nav-buttons a:hover {
   background-color: #a5242499;
   -webkit-text-stroke: 0.5px #252525;
-  box-shadow: inset 1.25px 2.5px 2px #00000075;
 }
 #navbar #nav-buttons a:nth-child(odd):hover {
   background-color: #083d7799;
   -webkit-text-stroke: 0.5px #252525;
+}
+#navbar #nav-buttons a:active {
+  box-shadow: inset 1.25px 2.5px 2px #00000075;
 }
 #home {
   display: flex;
@@ -143,8 +145,8 @@ body {
   text-align: center;
   padding: 2%;
   color: #eee;
-  background-color: #a52424;
-  border: 5px solid #083d77;
+  background-color: #083d77;
+  border: 5px solid #a52424;
   border-radius: 15px;
   box-shadow: 2.5px 5px 4px #00000075;
 }
@@ -172,6 +174,7 @@ body {
   border-radius: 10px;
   color: #eee;
   box-shadow: 2.5px 5px 4px #00000075;
+  margin: 1%;
   margin-top: 2%;
   margin-bottom: 2%;
 }
@@ -448,8 +451,10 @@ body {
   box-shadow: 2px 2px 5px 3px #00000075;
 }
 #contact #contact-form form button:hover {
-  background-color: #083d77;
+  background-color: #083d7799;
   color: white;
+}
+#contact #contact-form form button:active {
   box-shadow: inset 2px 2px 5px 3px #00000099;
 }
 /* The alert message box */
@@ -630,4 +635,92 @@ body {
   background-color: #a52424;
   color: white;
   box-shadow: inset 2px 2px 5px 3px #00000099;
+}
+#admin-dashboard .content {
+  width: 100vw;
+}
+#admin-dashboard .content .units form {
+  width: 100%;
+}
+#admin-dashboard .content .units form .climate .unit {
+  background-color: #083d7799;
+  color: #eee;
+  -webkit-text-stroke: 0.5px #a52424;
+}
+#admin-dashboard .content .units form .non-climate .unit {
+  background-color: #a5242499;
+  color: #eee;
+  -webkit-text-stroke: 0.5px #083d77;
+}
+#admin-dashboard .content .units form div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+#admin-dashboard .content .units form div .unit {
+  display: block;
+  width: fit-content;
+  min-width: 270px;
+  min-height: 140px;
+  margin: 1rem;
+  padding: 1rem;
+  border: 1px solid black;
+  border-radius: 5px;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
+  background-color: white;
+}
+#admin-dashboard .content .units form div .unit h3 {
+  margin: 0;
+  padding: 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin: 1%;
+  padding: 1%;
+}
+#admin-dashboard .content .units form div .unit .unit-price {
+  width: 100%;
+}
+#admin-dashboard .content .units form div .unit .unit-price h4 {
+  width: 100%;
+  text-align: center;
+  margin: 1%;
+  padding: 1%;
+  font-weight: bolder;
+}
+#admin-dashboard .content .units form div .unit .unit-price input {
+  width: 70px;
+  margin: auto;
+  margin: 1%;
+  padding: 1%;
+  border-radius: 7.5px;
+  text-align: center;
+}
+#admin-dashboard .content .units form #submit {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  padding: 1%;
+  margin: 1%;
+}
+#admin-dashboard .content .units form #submit input {
+  align-items: center;
+  width: 200px;
+  height: 75px;
+  margin: 0.5rem 0;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  background-color: #a52424;
+  color: white;
+  font-weight: 600;
+  font-size: 1.5rem;
+  box-shadow: 2px 2px 5px 3px #00000075;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.climate .climate {
+  background-color: #083d7799;
+}
+.non-climate .non-climate {
+  background-color: #a52424;
 }

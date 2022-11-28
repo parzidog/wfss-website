@@ -21,9 +21,8 @@ function App() {
           <Route path="size" element={<SizeGuide />} />
           <Route path="faq" element={<FAQ />} />
           <Route path="contact" element={<Contact />} />
-          <Route path="admin" element={<Admin />} >
-            <Route path="dashboard" element={<AdminDashboard />} />
-          </Route>
+          <Route path="admin" element={<Admin />} />
+          <Route path="admin/dashboard" element={<AdminDashboard />} />
           {/* <Route path="*" element={<NotFound />} /> */}
         </Route>
       </Routes>

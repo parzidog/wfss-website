@@ -1,16 +1,6 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
-export const fetchUser = createAsyncThunk("user/fetchUser", async () => {
-	const token = window.localStorage.getItem("token");
-	if (token) {
-		const { data } = await axios.get("/api/user/me", {
-			headers: { authorization: token },
-		});
-		return data;
-	}
-});
-
 export const editUser = createAsyncThunk(
 	"user/editUser",
 	async ({ signUp }) => {
@@ -29,7 +19,6 @@ export const loginUser = createAsyncThunk(
 	async ({ login }, { rejectWithValue }) => {
 		try {
 			const { data } = await axios.post("/api/users/login", login);
-			console.log("data", data);
 			return data;
 		} catch (error) {
 			return rejectWithValue(error.response.data);
@@ -90,19 +79,6 @@ const userSlice = createSlice({
 				state.status = "succeeded";
 				const field = action.payload.field;
 				state.formInputAvailable[field] = action.payload.isAvailable;
-			})
-			.addCase(fetchUser.pending, (state) => {
-				state.status = "pending";
-			})
-			.addCase(fetchUser.fulfilled, (state, action) => {
-				state.status = "succeeded";
-				state.userInfo = action.payload;
-				state.isLogged = action.payload ? true : false;
-				state.token = localStorage.getItem("token");
-			})
-			.addCase(fetchUser.rejected, (state, action) => {
-				state.status = "failed";
-				state.error = action.error;
 			})
 			.addCase(loginUser.fulfilled, (state, action) => {
 				state.token = action.payload.token;
