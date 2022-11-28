@@ -23,7 +23,8 @@ body {
   justify-content: space-between;
   height: 60px;
   background-color: #a5a5a5;
-  box-shadow: 1.25px 2.5px 2px #00000075;
+  box-shadow: 0 2.5px 2px #00000075;
+  border-bottom: 5px solid #083d77;
 }
 #navbar a {
   min-width: fit-content;
@@ -235,7 +236,8 @@ body {
   justify-content: space-around;
   min-height: 150px;
   background-color: #a5a5a5;
-  box-shadow: inset 0 0 10px #00000075;
+  box-shadow: 0 -2.5px 3px #00000075;
+  border-top: 5px solid #083d77;
 }
 #footer #admin-button {
   padding: 2%;

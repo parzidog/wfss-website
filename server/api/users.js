@@ -15,10 +15,9 @@ router.get("/", async (req, res, next) => {
 });
 
 //USER ACCOUNT ROUTES
-router.get("/login", async (req, res, next) => {
+router.post("/login", async (req, res, next) => {
   try {
     const { username, password } = req.body;
-    console.log("LOGIN REQ", req.body);
     const userData = { username: username, password: password };
     let user = await User.authenticate(userData);
     res.send({ token: await user.generateToken() });

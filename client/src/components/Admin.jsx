@@ -24,7 +24,7 @@ const Admin = () => {
   };
   const handleChange = (prop) => (event) => {
     let value = event.target.value;
-    if (prop == "username") {
+    if (prop === "username") {
       value = value.toLowerCase();
     }
     setLogin({
@@ -32,17 +32,18 @@ const Admin = () => {
       [prop]: value,
     });
   };
-  // useEffect(() => {
-  //   loginAttempt &&
-  //     dispatch(fetchUser()).then((res) => {
-  //       if (res.payload) {
-  //         navigate("/admin/dashboard");
-  //       }
-  //     });
-  //   // navigate("/");
-  // }, [loginAttempt]);
+  useEffect(() => {
+    loginAttempt &&
+      dispatch(fetchUser())
+        .then(() => {
+          if (window.localStorage.token) {
+            navigate("/admin/dashboard");
+          }
+        });
+    // navigate("/");
+  });
 
-  // useEffect(() => {
+  // useEffect(() => {a
   //   if (loginAttempError) {
   //     dispatch(setError());
   //   }
