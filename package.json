@@ -5,7 +5,7 @@
     "client": "npm run start",
     "server": "nodemon server/index.js",
     "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\"",
-    "start": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\""
+    "start": "react-scripts start"
   },
   "devDependencies": {
     "concurrently": "^4.0.1",
