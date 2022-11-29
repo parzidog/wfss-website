@@ -1,6 +1,33 @@
-import React from "react"
+import React, { useEffect } from "react"
 
 const Footer = () => {
+  const [isMobile, setIsMobile] = React.useState(false)
+
+  const handleResize = () => {
+    if (window.innerWidth < 768) {
+      setIsMobile(true)
+    } else {
+      setIsMobile(false)
+    }
+    if (isMobile) {
+      let mobileText = document.getElementsByClassName("box");
+      let adminButton = document.getElementsByClassName("admin-button");
+      for (let i = 0; i < mobileText.length; i++) {
+        mobileText[i].style.fontSize = "small";
+        mobileText[i].style.width = "fit-content";
+      }
+      for (let i = 0; i < adminButton.length; i++) {
+        adminButton[i].style.fontSize = "small";
+        adminButton[i].style.width = "fit-content";
+      }
+    }
+  }
+
+  useEffect(() => {
+    handleResize()
+    window.addEventListener("resize", handleResize)
+  }, [])
+
   return (
     <footer>
       <div id='footer'>

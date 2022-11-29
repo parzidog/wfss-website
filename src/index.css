@@ -123,7 +123,6 @@ body {
   margin: 2%;
   padding: 2%;
   text-align: center;
-  width: fit-content;
   width: 300px;
   background-color: #a52424;
   color: #eee;
@@ -262,6 +261,7 @@ body {
   margin: auto;
   display: flex;
   flex-wrap: wrap;
+  width: fit-content;
   max-width: 125px;
   text-align: center;
   border-radius: 25px;
@@ -401,6 +401,7 @@ body {
   margin-bottom: 2%;
   padding: 2%;
   width: 35%;
+  min-width: 300px;
   background-color: #083d7799;
   border-radius: 10px;
   box-shadow: 2.5px 5px 4px #00000075;
@@ -429,6 +430,7 @@ body {
   display: flex;
   flex-direction: column;
   width: 25%;
+  min-width: 300px;
   margin: auto;
 }
 #contact #contact-form form input,
@@ -468,6 +470,7 @@ body {
   top: 25%;
   left: 25%;
   width: 50%;
+  min-width: 400px;
   height: fit-content;
   border: 5px solid #252525;
   border-radius: 10px;
