@@ -1,24 +1,24 @@
 import React, { useState } from "react";
-import { useDispatch } from "react-redux";
-import { useNavigate } from "react-router-dom";
-import {
-  loginUser,
-} from "../features/userSlice";
+// import { useDispatch } from "react-redux";
+// import { useNavigate } from "react-router-dom";
+// import {
+//   loginUser,
+// } from "../features/userSlice";
 
 const Admin = () => {
-  const dispatch = useDispatch();
-  const navigate = useNavigate();
+  // const dispatch = useDispatch();
+  // const navigate = useNavigate();
 
   const [login, setLogin] = useState({});
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    dispatch(loginUser({ login }))
-      .then((res) => {
-        window.localStorage.token = res.payload.token;
-        console.log("res", res.payload.token);
-        navigate("/admin/dashboard");
-      })
+    // dispatch(loginUser({ login }))
+    //   .then((res) => {
+    //     window.localStorage.token = res.payload.token;
+    //     console.log("res", res.payload.token);
+    //     navigate("/admin/dashboard");
+    //   })
   };
   const handleChange = (prop) => (event) => {
     let value = event.target.value;

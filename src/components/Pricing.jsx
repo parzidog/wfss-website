@@ -1,35 +1,45 @@
-import React, { useState, useEffect } from "react"
-import { useDispatch } from "react-redux"
-import { fetchUnits } from "../features/unitSlice";
+// import React, { useState, useEffect } from "react"
+// import { useDispatch } from "react-redux"
+// import { fetchUnits } from "../features/unitSlice";
+import units from "../assets/units.js"
 
 const Pricing = () => {
-  const dispatch = useDispatch();
-  const [units, setUnits] = useState([]);
-  const [climate, setClimate] = useState([]);
-  const [nonClimate, setNonClimate] = useState([]);
-  let temp = [];
-  let temClimate = [];
+  // const dispatch = useDispatch();
+  // const [units, setUnits] = useState([]);
+  // const [climate, setClimate] = useState([]);
+  // const [nonClimate, setNonClimate] = useState([]);
+  let climate = [];
+  let nonClimate = [];
 
-  useEffect(() => {
-    dispatch(fetchUnits()).then((res) => {
-      setUnits(res.payload);
-    });
-  }, []);
+  units.map(unit => {
+    if (unit.climate) {
+      climate.push(unit)
+    }
+    else {
+      nonClimate.push(unit)
+    }
+  })
 
-  useEffect(() => {
-    units.map(unit => {
-      if (unit.climate) {
-        temClimate.push(unit)
-      }
-      else {
-        temp.push(unit)
-      }
-    })
-    setClimate(temClimate);
-    setNonClimate(temp);
-    temp = [];
-    temClimate = [];
-  }, [units])
+  // useEffect(() => {
+  //   dispatch(fetchUnits()).then((res) => {
+  //     setUnits(res.payload);
+  //   });
+  // }, []);
+
+  // useEffect(() => {
+  //   units.map(unit => {
+  //     if (unit.climate) {
+  //       temClimate.push(unit)
+  //     }
+  //     else {
+  //       temp.push(unit)
+  //     }
+  //   })
+  //   setClimate(temClimate);
+  //   setNonClimate(temp);
+  //   temp = [];
+  //   temClimate = [];
+  // }, [units])
 
   return (
     <div>
