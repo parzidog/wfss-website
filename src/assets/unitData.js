@@ -61,4 +61,4 @@ const units = [
   },
 ];
 
-module.exports = units;
+export default units;

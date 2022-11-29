@@ -1,7 +1,7 @@
 // import React, { useState, useEffect } from "react"
 // import { useDispatch } from "react-redux"
 // import { fetchUnits } from "../features/unitSlice";
-import units from "../assets/units.js"
+import units from "../assets/unitData";
 
 const Pricing = () => {
   // const dispatch = useDispatch();

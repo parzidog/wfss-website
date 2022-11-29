@@ -102,7 +102,7 @@ export const isLoggedStatus = (state) => {
 		return state.user.isLogged;
 	}
 	return null;
-};;
+};
 // export const getUserToken = (state) => state.user.token;
 export const getError = (state) => {
 	if (state.user) {
