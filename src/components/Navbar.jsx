@@ -15,6 +15,7 @@ const Navbar = () => {
       let navButtons = document.getElementsByClassName("nav-buttons");
       for (let i = 0; i < navButtons.length; i++) {
         navButtons[i].style.fontSize = "small";
+        navButtons[i].style.padding = "0%";
       }
     }
   }

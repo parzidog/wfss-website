@@ -242,14 +242,15 @@ body {
   border-top: 5px solid #083d77;
 }
 #footer #admin-button {
-  padding: 2%;
+  padding: 0%;
   margin: auto;
   height: fit-content;
+  text-align: center;
 }
 #footer #admin-button a {
   text-decoration: none;
   color: #252525;
-  font-size: 150%;
+  font-size: 100%;
   font-weight: bolder;
   text-shadow: 2px 2px 4px #fff;
 }

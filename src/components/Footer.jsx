@@ -19,6 +19,7 @@ const Footer = () => {
       for (let i = 0; i < adminButton.length; i++) {
         adminButton[i].style.fontSize = "small";
         adminButton[i].style.width = "fit-content";
+        adminButton[i].style.padding = "0%";
       }
     }
   }
