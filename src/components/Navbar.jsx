@@ -32,7 +32,7 @@ const Navbar = () => {
       </Link>
       <div id='nav-buttons'>
         <Link to={"pricing"}>
-          <h2 className="navbutton" >Unit Pricing</h2>
+          <h2 className="navbutton" >Pricing</h2>
         </Link>
         <Link to={"location"}>
           <h2 className="navbutton" >Location</h2>
