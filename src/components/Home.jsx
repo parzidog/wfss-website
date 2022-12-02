@@ -33,7 +33,9 @@ const Home = () => {
       <div id='facility' style={{
         backgroundImage: `url(${units})`,
         backgroundSize: "cover",
-        height: "40vh",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        height: "52vh",
       }}>
         <div className="mobile-text">
 

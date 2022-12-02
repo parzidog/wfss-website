@@ -19,6 +19,7 @@ body {
 }
 #navbar {
   display: flex;
+  flex-wrap: wrap;
   padding: 1.5%;
   justify-content: space-between;
   height: 60px;
@@ -37,14 +38,14 @@ body {
   display: flex;
   justify-content: right;
   width: fit-content;
-  min-width: 600px;
 }
 #navbar #nav-buttons a {
   text-decoration: none;
   color: #eee;
   margin: 1%;
   min-width: fit-content;
-  padding: 2%;
+  padding: 1%;
+  height: fit-content;
   background-color: #a52424;
   border: 1px solid #252525;
   border-radius: 10px;
@@ -727,4 +728,71 @@ body {
 }
 .non-climate .non-climate {
   background-color: #a52424;
+}
+@media screen and (max-width: 700px) {
+  nav img {
+    width: 25vw;
+  }
+  nav #nav-buttons {
+    width: fit-content;
+  }
+  nav #nav-buttons a {
+    font-size: 0.5rem;
+    padding: 0;
+  }
+  nav #nav-buttons a h2 {
+    font-size: 0.5rem;
+  }
+  .header h1 {
+    font-size: 2.5rem;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+  h2 {
+    font-size: 1rem;
+  }
+  #unit-overview {
+    font-size: 0.75rem;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  #footer {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  #footer #contact {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  #pricing #climate .pricing-card,
+  #pricing #non-climate .pricing-card {
+    width: 85vw !important;
+  }
+  #pricing #climate .pricing-card h1,
+  #pricing #non-climate .pricing-card h1 {
+    font-size: 1.5rem !important;
+  }
+  #faq {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  #faq .header {
+    width: 100vw;
+  }
+  #faq #question-container {
+    width: 85vw;
+  }
+  #faq #question-container .container {
+    max-width: 85vw;
+    min-width: fit-content;
+  }
+  #faq #question-container .container .question {
+    width: 85vw;
+  }
+  #faq #question-container .container .answer {
+    max-width: 85vw;
+  }
 }

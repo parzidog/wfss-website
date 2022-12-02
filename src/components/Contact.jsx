@@ -45,7 +45,7 @@ const Contact = () => {
           style={{ textDecoration: "underline" }}>
           (940) 386-1146
         </span>
-        {" with any questions you may have, or to start your next great rental experience today! <br />You can also contact us using this online form if that is more convenient, and a member of our staff will get back to you as soon as possible."}</p>
+        {" with any questions you may have, or to start your next great rental experience today! You can also contact us using this online form if that is more convenient, and a member of our staff will get back to you as soon as possible."}</p>
       <div id='contact-form'>
         <form ref={form} id="contact-form" onSubmit={handleSubmit}>
           <input type="text" name='user_name' placeholder='Full Name' required />
