@@ -37,7 +37,6 @@ const AdminDashboard = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log("UNITS: ", units);
     units.map((unit) => {
       fetch(`/api/units/${unit.id}`, {
         method: "PUT",
